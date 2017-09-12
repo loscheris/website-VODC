@@ -17,7 +17,7 @@ Dependencies of the website:
 * Node.js
 * MongoDB
 
-##Before Using
+## Before Using
 Download the database, machine learning models
 
 1. Download ‘extra.zip’ from: https://drive.google.com/file/d/0B6lX401WcyJRX2NqS0dDUmlUa00/view?usp=sharing
@@ -52,7 +52,7 @@ web_VideoCaptioning main dependencies:
 * skimage
 * pymongo
 
-##Run the server
+## Run the server
 1. ```cd Express_```
 1. ```mongod --dbpath data/ ```
 3. In another terminal run:``` node bin/www```
