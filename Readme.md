@@ -56,6 +56,6 @@ web_VideoCaptioning main dependencies:
 1. ```cd Express_```
 1. ```mongod --dbpath data/ ```
 3. In another terminal run:``` node bin/www```
-4. Visit <localhost:3000> on Chrome
+4. Visit https://localhost:3000 on Chrome
 
 
