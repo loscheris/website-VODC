@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include templates/head.ejs%>
+</head>
+
+<body>
+    <header>
+        <% include templates/header.ejs%>
+    </header>
+
+    <div class="main">
+        <h2 style="text-align: center;">Video: <%=filename%></h2>
+
+        <div style="text-align: center; padding-top: 30px; padding-bottom: 30px">
+            <video id="current_video" style="background-color: black" controls preload="auto" width="720" height="407">
+                <source id="video_src" type='video/mp4'>
+            </video>
+        </div>
+
+        <script>
+            document.getElementById("video_src").src =
+                "/playvideo/play?filename=".concat(<%- JSON.stringify(filename) %>);
+        </script>
+
+        <div style="padding-bottom: 40px;">
+            <h3 style="text-align: center; font-size: 25px; font-weight: 400;"> Caption: <%= search_results[0].caption%> </h3>
+        </div>
+
+        <div class="columns" style="padding-left: 65px">
+            <ul>
+                <% search_results[0].specific_labels.forEach(function(item){ %>
+                    <% if(item.label !== 'NoObject'){ %>
+                <li > Time <%= item.start_time%>-<%= item.end_time%>s:
+                    <a class="video_jump" href="#" data-start_time=<%= item.start_time%> > <%= item.label%> </a>
+                </li>
+                    <% }; %>
+                <% }); %>
+            </ul>
+        </div>
+
+        <script>
+            $(function() {
+                $(".video_jump").on("click",function() {
+                    document.getElementById("current_video").currentTime = Number(this.dataset.start_time);
+                });
+            });
+        </script>
+    </div>
+
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include templates/head.ejs%>
+</head>
+
+<body>
+    <header>
+        <% var nav='upload';%>
+        <% include templates/header.ejs%>
+    </header>
+
+    <div class="main">
+        <h1 id="upload_successful" style="text-align: center">Upload Successful! </h1>
+
+        <div style="text-align: center; margin-top: 50px; padding-top: 80px;">
+            <button id="process_button" class="button button3" onclick="display_loader()">Process</button>
+        </div>
+
+        <div id="loader" style="display: none;"> </div>
+
+        <h2 id="process" style="display: none; margin-top: 250px; text-align: center;">
+            Processing... <br style="line-height: 150%;">
+            Please wait for a few minutes
+        </h2>
+
+    </div>
+
+    <script>
+        function display_loader(){
+            window.location.href = "/upload/process_video";
+            document.getElementById("loader").style.display = 'block';
+            document.getElementById("process").style.display = 'block';
+            document.getElementById("process_button").style.display = 'none';
+            document.getElementById("upload_successful").style.display= 'none';
+        }
+    </script>
+
+</body>
+</html>

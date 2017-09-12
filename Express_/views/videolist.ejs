@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include templates/head.ejs%>
+</head>
+
+<body>
+    <header>
+        <% include templates/header.ejs%>
+    </header>
+
+    <div class="main">
+        <h1 style="text-align: center;">All Videos</h1>
+        <div class="columns" style="margin-top: 30px; margin-left: 100px;">
+            <ul id="video">
+                <% search_results.forEach(function(item){ %>
+                <li>
+                    <a class="videolist" href='#' name=<%= item.v_name%> > <%= item.v_name%> </a>
+                </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+            $(".videolist").on("click",function() {
+                var filename = '?filename='+this.name;
+                var url_file = '/playvideo' + filename;
+                window.location.href = url_file;
+            });
+        });
+    </script>
+</body>
+</html>

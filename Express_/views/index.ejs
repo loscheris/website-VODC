@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include templates/head.ejs%>
+</head>
+
+<body>
+  <header>
+      <% include templates/header.ejs%>
+  </header>
+
+  <div class="main">
+    <div class="homepage_title">
+      <h1>Video Object Detection and Captioning</h1>
+
+      <h2 style="padding-top: 20px; font-weight: 400;"> a platform to analyse videos by machine learning</h2>
+    </div>
+
+    <script>
+        function validateForm() {
+            var x = document.forms["search_label_form"]["label_name"].value.trim();
+            if (x == "") {
+                alert("Search field must be filled out");
+                return false;
+            }
+        }
+    </script>
+
+    <div style="text-align:center; padding-top: 20px; padding-bottom: 0.3cm">
+      <!--<h3>Try to search the database: </h3>-->
+      <form  action="/searchdb/search_label_name" onsubmit="return validateForm()" method="post" id="search_label_name" name="search_label_form">
+        <input class="search_input_box" type="text" name="label_name" placeholder="Search for videos by name or object label"/>
+      </form>
+      <button class="button button3"  style="margin-top: 50px;" type="submit" form="search_label_name" value="Submit">Search</button>
+    </div>
+
+  </div>
+
+</body>
+</html>

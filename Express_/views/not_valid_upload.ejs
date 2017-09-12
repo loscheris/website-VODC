@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include templates/head.ejs%>
+</head>
+
+<body>
+<header>
+    <% include templates/header.ejs%>
+</header>
+
+<div class="main" style="text-align: center;">
+    <h1 style="text-align: center; padding-top: 65px;"> Please upload a .avi or .mp4 file.</h1>
+    <button class="button button3" style="margin-top: 100px;" onclick="upload_page()"> Back</button>
+    <script>
+        function upload_page(){
+            window.location="/upload";
+        }
+    </script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 100px;
+}
+
+a{
+  color: #44577a;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  height: 94%;
+  background-image: url("../images/bg1.jpg");
+  padding-buttom: 20px
+  /*background-repeat: no-repeat;*/
+}
+
+h1{
+  padding-top: 20px;
+  font-size: 4em;
+}
+
+.hover_text:hover{
+  text-shadow: 0 0 10px #719ECE;;
+}
+
+.columns
+{
+  margin-bottom: 40px;
+  -webkit-column-width: 11.5em; /* webkit, Safari, Chrome */
+  column-width: 25em;
+}
+
+.columns ul
+{
+  margin: 0;
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.columns ul li
+{
+  padding-bottom: 5px;
+}
+
+/* correct webkit/chrome uneven margin on the first column*/
+.columns >ul >li:first-child
+{
+  margin:0;
+}
+
+.ls1{
+  display: block;
+  width: 25%;
+  float: left;
+  padding-bottom: 20px;
+}
+
+.main{
+  padding-top: 30px;
+}
+
+.main>ul>li,
+.main>ul>li>a{
+  font-size: 19px;
+}
+
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  outline: none;
+}
+
+.inputfile + label {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  -webkit-transition-duration: 0.4s;
+  text-align: center;
+  padding-top: 6px;
+  width:320px;
+  height:40px;
+  margin-left: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  background-color: #a2a2a2;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: #3b393f;
+  color: white;
+  box-shadow: 0 0 10px #719ECE;
+}
+
+.inputfile + label {
+  cursor: pointer;
+}
+
+
+
+
+.search_input_box {
+  margin-top: 100px;
+  width: 600px;
+  height: 45px;
+  font-size: 20px;
+  border: 1px solid #96a9b1;
+  padding-left: 20px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.search_input_box:focus,
+.search_input_box:hover{
+  box-shadow: 0 0 10px #719ECE;
+}
+
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button2 {
+  text-align: center;
+  width:150px;
+  height:30px;
+  padding: 0px;
+  margin-top: 20px;
+  background-color: #a2a2a2;
+  color: white;
+  border-radius: 10px;
+
+}
+
+.button2:hover {
+  background-color: #3b393f;
+  color: white;
+  box-shadow: 0 0 10px #719ECE;
+}
+
+.button2:focus {
+  outline: none;
+}
+
+
+
+.button3 {
+  text-align: center;
+  width:200px;
+  height:40px;
+  padding: 0px;
+  margin-top: 20px;
+  background-color: #a2a2a2;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.button3:hover {
+  background-color: #3b393f;
+  color: white;
+  box-shadow: 0 0 10px #719ECE;
+}
+
+.button3:focus {
+  outline: none;
+}
+
+
+
+.homepage_title{
+  text-align: center;
+  color: #2d393f;
+}
+
+
+.navbar-default {
+  background-color: #000000;
+  border-color: rgb(140, 142, 133);
+  border-bottom-width: 2px;
+}
+
+
+.navbar-default .navbar-brand {
+  padding-left: 30px;
+  padding-right: 50px;
+  font-size: 20px;
+  color: #868186;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: rgb(210, 210, 210);
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #868186;
+}
+
+.navbar-default .navbar-nav>.active> a,
+.navbar-default .navbar-nav>.active> a:focus,
+.navbar-default .navbar-nav>.active> a:hover {
+  background: rgb(0, 0, 0);
+  color: #868186;
+}
+
+/*background-color: #a2a2a2;*/
+
+#loader {
+  position: fixed;
+  left: 43%;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #12273f;
+  width: 150px;
+  height: 150px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  box-shadow: 0 0 15px #425a75;
+}
+
+#loader:hover{
+  box-shadow: 0 0 25px #080d12;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

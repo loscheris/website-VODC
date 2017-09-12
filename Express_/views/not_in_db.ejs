@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include templates/head.ejs%>
+</head>
+
+<body>
+<header>
+    <% include templates/header.ejs%>
+</header>
+
+<div class="main" style="text-align: center;">
+    <h1 style="text-align: center; padding-top: 65px;"> No document is found.</h1>
+    <h1 style="text-align: center; padding-top: 10px;"> Please try again.</h1>
+    <button class="button button3" style="margin-top: 100px;" onclick="render_home_page()"> Back</button>
+    <script>
+        function render_home_page(){
+            window.location="/";
+        }
+    </script>
+</div>
+
+</body>
+</html>
