@@ -35,7 +35,7 @@ pymongo
 
 =======================================================================
 Run the server and the database
-1. cd to directory ¡®Express_¡¯
+1. cd Express_
 1. mongod --dbpath data/ 
 3. In another terminal run: node bin/www
 4. Visit localhost:3000¡¯ on Chrome
